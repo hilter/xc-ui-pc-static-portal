@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js测试程序</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+    <!-- 实现body区域显示一个麦客子 -->
+    <div id="app">
+        {{name}}<!-- 相当于MVVM中的view视图 -->
+    </div>
+</body>
+<script>
+    // 编写MVVM中的model部分以及VM(ViewModel部分)
+    var VM = new Vue({
+        el: '#app',// vm接管了app区域的管理
+        data: {// model数据
+            name: '麦客子'
+        }
+    });
+
+</script>
+</html>

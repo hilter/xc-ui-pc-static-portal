@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js测试程序</title>
+</head>
+<body>
+<!-- 实现body区域显示一个麦客子 -->
+<div id="app">
+    <a :href="url">
+        <span v-text="name"></span>
+    </a>
+
+    <input type="text" v-model="num1">+
+    <input type="text" v-model="num2">=
+    <span v-text="result"></span>
+    <button v-on:click="change">计算</button>
+</div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+    // 编写MVVM中的model部分以及VM(ViewModel部分)
+    var VM = new Vue({
+        el: '#app',// vm接管了app区域的管理
+        data: {// model数据
+            name: '麦客子',
+            num1:1,
+            num2:2,
+            result:0,
+            url:'https://www.baidu.com'
+        },
+        methods:{
+            change:function () {
+                this.result = Number.parseInt(this.num1)+Number.parseInt(this.num2);
+                alert("计算结果"+this.result)
+            }
+        }
+    });
+
+</script>
+</html>
