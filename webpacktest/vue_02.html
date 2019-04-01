@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js测试程序</title>
+</head>
+<body>
+<!-- 实现body区域显示一个麦客子 -->
+<div id="app">
+    <a :href="url">
+        <span v-text="name"></span>
+    </a>
+
+    <input type="text" v-model="num1">+
+    <input type="text" v-model="num2">=
+    <span v-text="result"></span>
+    <button v-on:click="change">计算</button>
+</div>
+</body>
+<script src="build.js"></script>
+</html>
